@@ -1,7 +1,9 @@
+import { BASE_URL } from '@/constants'
+
 export const sharedMetadata = {
-  title: 'Onur Şuyalçınkaya',
-  description: 'Software Engineer, DJ, writer, and minimalist, based in Amsterdam, The Netherlands',
-  url: 'https://onur.dev',
+  title: 'Ali Irani',
+  description: 'Senior Fullstack Engineer',
+  url: BASE_URL,
   ogImage: {
     width: 1200,
     height: 630,

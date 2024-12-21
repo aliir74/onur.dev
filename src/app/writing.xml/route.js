@@ -2,15 +2,16 @@ import { Feed } from 'feed'
 
 import { getAllPosts } from '@/lib/contentful'
 import { getSortedPosts } from '@/lib/utils'
+import { BASE_URL } from '@/constants'
 
 export async function GET() {
   const allPosts = await getAllPosts()
   const sortedPosts = getSortedPosts(allPosts)
   const date = new Date()
-  const siteURL = 'https://onur.dev'
+  const siteURL = BASE_URL
   const author = {
-    name: 'Onur Şuyalçınkaya',
-    link: 'https://onur.dev'
+    name: 'Ali Irani',
+    link: BASE_URL
   }
 
   const feed = new Feed({

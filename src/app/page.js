@@ -7,41 +7,57 @@ import { Button } from '@/components/ui/button.jsx'
 import Image from 'next/image'
 
 export default async function Home() {
-  const linksUrls = ['/writing', '/journey', '/music', '/contact']
+  // const linksUrls = ['/writing', '/journey', '/music', '/contact']
+  const linksUrls = []
   return (
     <ScrollArea useScrollAreaId>
       <FloatingHeader scrollTitle="Ali Irani" />
       <div className="content-wrapper">
         <PageTitle title="Home" className="lg:hidden" />
         <div className="content mb-12 flex flex-row gap-4">
-          <div className="flex flex-[2] flex-col gap-4">
+          <div className="flex flex-[2] flex-col gap-4 ">
             <p>Hi 👋</p>
             <p>I'm Ali, a Fullstack Software Engineer, Consultant, Musician and Content Creator.</p>
             <p>
               I'm working currently as a Senior Fullstack Software Engineer at{' '}
-              <a href="https://ovou.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://ovou.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-600"
+              >
                 OVOU
               </a>{' '}
               and Helping{' '}
-              <a href="https://aztaclub.ir" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://aztaclub.ir"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-600"
+              >
                 Azta
               </a>{' '}
               bookclub as a consultant for their agile processes and their technical stuff.
             </p>
             {/* <p>
               Previously, I worked as a Senior Software Engineer and Team Lead at{' '}
-              <a href="https://balad.ir" target="_blank" rel="noopener noreferrer">
+              <a href="https://balad.ir" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                 Balad
               </a>{' '}
               (The most popular Iranian map service with 20M+ users) and a Software Engineer at{' '}
-              <a href="https://tapsi.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://tapsi.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                 Tapsi
               </a>{' '}
               (The second most popular Iranian uber-like service with 10M+ users).
             </p> */}
             <p>
               I'm also a musician and a content creator at{' '}
-              <a href="https://youtube.com/@aliir74" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://youtube.com/@aliir74"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-600"
+              >
                 Youtube
               </a>
               . I started my Youtube channel in 2019 to make technology and programming content.

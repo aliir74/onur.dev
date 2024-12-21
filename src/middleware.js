@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/constants'
 import { NextResponse } from 'next/server'
 
 export function middleware(request, event) {
@@ -5,10 +6,7 @@ export function middleware(request, event) {
   const writingSlug = pathname.match(/\/writing\/(.*)/)?.[1]
 
   async function sendAnalytics() {
-    const URL =
-      process.env.NODE_ENV === 'production'
-        ? 'https://onur.dev/api/increment-views'
-        : 'http://localhost:3000/api/increment-views'
+    const URL = `${BASE_URL}/api/increment-views`
 
     try {
       const res = await fetch(`${URL}?slug=${writingSlug}`, {

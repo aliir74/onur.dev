@@ -1,3 +1,5 @@
+import { BASE_URL } from '@/constants'
+
 export const OpenGraphImage = ({ title, description, icon, url }) => {
   return (
     <div
@@ -33,7 +35,7 @@ export const OpenGraphImage = ({ title, description, icon, url }) => {
           borderRadius: 9999
         }}
       >
-        {`onur.dev${url ? `/${url}` : ''}`}
+        {`${BASE_URL}${url ? `/${url}` : ''}`}
       </div>
       <span
         style={{

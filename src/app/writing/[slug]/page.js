@@ -9,6 +9,7 @@ import { WritingViews } from '@/components/writing-views'
 import { ClientOnly } from '@/components/client-only'
 import { getPost, getWritingSeo, getAllPostSlugs } from '@/lib/contentful'
 import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
+import { BASE_URL } from '@/constants'
 
 export async function generateStaticParams() {
   const allPosts = await getAllPostSlugs()
@@ -53,7 +54,7 @@ export default async function WritingSlug({ params }) {
       '@type': 'Person',
       name: 'Onur Şuyalçınkaya'
     },
-    url: `https://onur.dev/writing/${slug}`
+    url: `${BASE_URL}/writing/${slug}`
   }
 
   return (
