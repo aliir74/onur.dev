@@ -1,4 +1,4 @@
-import { CommandIcon } from 'lucide-react'
+import { MenuIcon } from 'lucide-react'
 
 import { MenuContent } from '@/components/menu-content'
 import { Button } from '@/components/ui/button'
@@ -9,7 +9,7 @@ export function MobileDrawer() {
     <Drawer>
       <DrawerTrigger asChild>
         <Button variant="ghost" size="icon" title="Toggle drawer">
-          <CommandIcon size={16} />
+          <MenuIcon size={16} />
         </Button>
       </DrawerTrigger>
       <DrawerContent className="h-4/5">

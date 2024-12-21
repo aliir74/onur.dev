@@ -4,6 +4,9 @@ import 'server-only'
 import { isDevelopment } from '@/lib/utils'
 
 const fetchGraphQL = cache(async (query, preview = isDevelopment) => {
+  console.log(process.env.CONTENTFUL_SPACE_ID)
+  console.log(process.env.CONTENTFUL_ACCESS_TOKEN)
+  console.log(process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN)
   try {
     const res = await fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`, {
       method: 'POST',
@@ -15,7 +18,7 @@ const fetchGraphQL = cache(async (query, preview = isDevelopment) => {
       },
       body: JSON.stringify({ query })
     })
-
+    console.log(res)
     if (!res.ok) return null
     return res.json()
   } catch (error) {
