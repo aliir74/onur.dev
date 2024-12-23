@@ -6,25 +6,25 @@ import { getRegularFont, getBoldFont } from '@/lib/fonts'
 import { sharedMetadata } from '@/app/shared-metadata'
 
 export const alt = 'Writing'
-export const size = {
-  width: sharedMetadata.ogImage.width,
-  height: sharedMetadata.ogImage.height
-}
 export const contentType = sharedMetadata.ogImage.type
 
 export default async function Image() {
-  const [seoData = {}, regularFontData, boldFontData] = await Promise.all([
+  const [seoData, regularFontData, boldFontData] = await Promise.all([
     getPageSeo('writing'),
     getRegularFont(),
     getBoldFont()
   ])
-  const { seo: { title, description, ogImageTitle, ogImageSubtitle } = {} } = seoData
+
+  const title = seoData?.seo?.title || 'Writing'
+  const description = seoData?.seo?.description || 'My writings'
+  const ogImageTitle = seoData?.seo?.ogImageTitle || title
+  const ogImageSubtitle = seoData?.seo?.ogImageSubtitle || description
 
   return new ImageResponse(
     (
       <OpenGraphImage
-        title={ogImageTitle || title}
-        description={ogImageSubtitle || description}
+        title={ogImageTitle}
+        description={ogImageSubtitle}
         icon={
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,8 @@ export default async function Image() {
       />
     ),
     {
-      ...size,
+      width: sharedMetadata.ogImage.width,
+      height: sharedMetadata.ogImage.height,
       fonts: [
         {
           name: 'Geist Sans',

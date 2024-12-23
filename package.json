@@ -28,6 +28,7 @@
     "@supabase/supabase-js": "^2.39.8",
     "@tailwindcss/container-queries": "^0.1.1",
     "@vercel/speed-insights": "^1.0.10",
+    "caniuse-lite": "^1.0.30001690",
     "class-variance-authority": "^0.7.0",
     "classix": "^2.1.36",
     "dev": "^0.1.3",

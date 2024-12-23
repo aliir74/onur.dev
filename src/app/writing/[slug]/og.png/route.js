@@ -7,11 +7,6 @@ import { getRegularFont, getBoldFont } from '@/lib/fonts'
 import { sharedMetadata } from '@/app/shared-metadata'
 import { isDevelopment } from '@/lib/utils'
 
-export const size = {
-  width: sharedMetadata.ogImage.width,
-  height: sharedMetadata.ogImage.height
-}
-
 export async function generateStaticParams() {
   const allPosts = await getAllPostSlugs()
   return allPosts.map((post) => ({ slug: post.slug }))
@@ -25,7 +20,10 @@ export async function GET(_, { params }) {
     getRegularFont(),
     getBoldFont()
   ])
-  if (!seoData) return null
+  if (!seoData) {
+    return new Response('Not Found', { status: 404 })
+  }
+
   const {
     seo: { title, ogImageTitle, ogImageSubtitle }
   } = seoData
@@ -39,7 +37,8 @@ export async function GET(_, { params }) {
       />
     ),
     {
-      ...size,
+      width: sharedMetadata.ogImage.width,
+      height: sharedMetadata.ogImage.height,
       fonts: [
         {
           name: 'Geist Sans',

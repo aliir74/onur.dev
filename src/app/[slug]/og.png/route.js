@@ -5,11 +5,6 @@ import { getPageSeo, getAllPageSlugs } from '@/lib/contentful'
 import { getRegularFont, getBoldFont } from '@/lib/fonts'
 import { sharedMetadata } from '@/app/shared-metadata'
 
-export const size = {
-  width: sharedMetadata.ogImage.width,
-  height: sharedMetadata.ogImage.height
-}
-
 export async function generateStaticParams() {
   const allPages = await getAllPageSlugs()
 
@@ -70,7 +65,8 @@ export async function GET(_, { params }) {
       />
     ),
     {
-      ...size,
+      width: sharedMetadata.ogImage.width,
+      height: sharedMetadata.ogImage.height,
       fonts: [
         {
           name: 'Geist Sans',
