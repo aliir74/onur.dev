@@ -18,7 +18,23 @@ const nextConfig = {
     formats: ['image/avif']
   },
   async redirects() {
-    return []
+    return [
+      {
+        source: '/links',
+        destination: 'https://t.me/+3CqRmaAHDj5lOTE0',
+        permanent: false
+      },
+      {
+        source: '/tg',
+        destination: 'https://t.me/+3WJX7dt-ov85ZDhk',
+        permanent: false
+      },
+      {
+        source: '/yt',
+        destination: 'https://youtube.com/@aliir74',
+        permanent: false
+      }
+    ]
   },
   experimental: {
     optimizePackageImports: ['framer-motion', '@supabase/supabase-js', 'react-tweet'],
