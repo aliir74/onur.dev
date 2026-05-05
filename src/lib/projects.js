@@ -5,7 +5,8 @@ export const PROJECTS = [
     description:
       'Persian news bot: monitors Telegram channels and RSS feeds, summarizes via LLM, posts to Telegram and Bale.',
     url: 'https://github.com/aliir74/news-summarizer',
-    tech: ['Python', 'Pyrogram', 'OpenRouter']
+    tech: ['Python', 'Pyrogram', 'OpenRouter'],
+    featured: true
   },
   {
     slug: 'cortex',
@@ -13,7 +14,8 @@ export const PROJECTS = [
     description:
       'Claude Code plugin with developer-productivity skills — PR monitoring, ClickUp, research, browser verification.',
     url: 'https://github.com/aliir74/cortex',
-    tech: ['Claude Code', 'Shell']
+    tech: ['Claude Code', 'Shell'],
+    featured: true
   },
   {
     slug: 'fact-checker-bot',
@@ -21,7 +23,8 @@ export const PROJECTS = [
     description:
       'Telegram bot that fact-checks text, images, and URLs using Google Fact Check API + Gemini, deployed on Cloudflare Workers.',
     url: 'https://github.com/aliir74/fact-checker-bot',
-    tech: ['TypeScript', 'Cloudflare Workers', 'D1']
+    tech: ['TypeScript', 'Cloudflare Workers', 'D1'],
+    featured: true
   },
   {
     slug: 'twitter-blocker',
@@ -29,7 +32,8 @@ export const PROJECTS = [
     description:
       'Chrome/Firefox extension that uses AI to detect and block hate speech or cult-like praise in Twitter/X replies.',
     url: 'https://github.com/aliir74/twitter-blocker',
-    tech: ['TypeScript', 'WXT', 'React']
+    tech: ['TypeScript', 'WXT', 'React'],
+    featured: true
   },
   {
     slug: 'clickup-cli',

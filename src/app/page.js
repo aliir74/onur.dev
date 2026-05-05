@@ -83,7 +83,7 @@ export default async function Home() {
             </Link>
             .
           </p>
-          <ProjectsList />
+          <ProjectsList featuredOnly />
         </div>
         <div className="content mb-12">
           <h2 className="mb-2 text-xl font-semibold tracking-tight">Talks</h2>

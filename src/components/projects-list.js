@@ -2,14 +2,16 @@ import { ArrowUpRightIcon } from 'lucide-react'
 
 import { PROJECTS } from '@/lib/projects'
 
-export function ProjectsList() {
-  if (!PROJECTS || PROJECTS.length === 0) {
+export function ProjectsList({ featuredOnly = false } = {}) {
+  const projects = featuredOnly ? PROJECTS.filter((p) => p.featured) : PROJECTS
+
+  if (projects.length === 0) {
     return <p className="text-gray-500">No projects yet. Check back soon.</p>
   }
 
   return (
     <ul className="flex flex-col">
-      {PROJECTS.map((project) => (
+      {projects.map((project) => (
         <li key={project.slug}>
           <a
             href={project.url}
