@@ -104,14 +104,14 @@ and lets him control ordering/descriptions. Can add a GitHub-API enrichment laye
 - [x] Run `npm run lint` — fix any ESLint findings
 - [x] Run `npm run prettier` — apply formatting (single quotes, no semis, 120 width)
 - [x] Run `npm run build` — confirm production build passes, no warnings about missing metadata or dead links
-- [ ] Eyeball `/projects` at xs (390px), sm (435px), and desktop widths — confirm the row layout doesn't wrap awkwardly
+- [x] Eyeball `/projects` at xs (390px), sm (435px), and desktop widths — confirm the row layout doesn't wrap awkwardly
       with tech tags
 - [x] Confirm OG image generation still works (the global `og.png/route.js` should pick it up automatically — no
       per-page OG needed unless we want one)
-- [ ] Commit any lint/format fixes
-- [ ] Switch to personal GitHub account: `gh auth switch --user aliir74`
-- [ ] Push branch and open PR with summary + screenshot of `/projects` page
-- [ ] Switch back: `gh auth switch --user aliovou`
+- [x] Commit any lint/format fixes
+- [x] Switch to personal GitHub account: `gh auth switch --user aliir74`
+- [x] Push branch and open PR with summary + screenshot of `/projects` page
+- [x] Switch back: `gh auth switch --user aliovou`
 
 ---
 
