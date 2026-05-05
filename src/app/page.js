@@ -4,7 +4,10 @@ import { ScrollArea } from '@/components/scroll-area'
 import { FloatingHeader } from '@/components/floating-header'
 import { PageTitle } from '@/components/page-title'
 import { Button } from '@/components/ui/button.jsx'
+import { TalksList } from '@/components/talks-list'
 import Image from 'next/image'
+
+export const revalidate = 3600
 
 export default async function Home() {
   // const linksUrls = ['/writing', '/journey', '/music', '/contact']
@@ -66,6 +69,17 @@ export default async function Home() {
           <div className="flex flex-1 flex-row justify-around">
             <Image src="/assets/me.avif" alt="Ali Irani" width={300} height={300} className="object-cover" priority />
           </div>
+        </div>
+        <div className="content mb-12">
+          <h2 className="mb-2 text-xl font-semibold tracking-tight">Talks</h2>
+          <p className="mb-6 text-gray-600">
+            Selected talks I&apos;ve given. See all on{' '}
+            <Link href="/talks" className="text-blue-400 hover:text-blue-600">
+              /talks
+            </Link>
+            .
+          </p>
+          <TalksList />
         </div>
         <div className="flex flex-row justify-around">
           {linksUrls.map((url) => (
