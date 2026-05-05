@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 import { EyeIcon } from 'lucide-react'
 
 import { TailwindIndicator } from '@/components/tailwind-indicator'
@@ -39,6 +40,7 @@ export default async function RootLayout({ children }) {
         </main>
         <TailwindIndicator />
         <SpeedInsights />
+        <Analytics />
         <Script
           src="https://unpkg.com/@tinybirdco/flock.js"
           data-host="https://api.tinybird.co"
