@@ -20,9 +20,9 @@ export default async function Home() {
         <div className="content mb-12 flex flex-row gap-4">
           <div className="flex flex-[2] flex-col gap-4 ">
             <p>Hi 👋</p>
-            <p>I'm Ali, a Fullstack Software Engineer, Consultant, Musician and Content Creator.</p>
+            <p>I'm Ali — engineering lead at OVOU, AI-agent maximalist, occasional Persian Tar player.</p>
             <p>
-              I'm working currently as a Senior Fullstack Software Engineer at{' '}
+              My day job is dragging a small team into a future where most of the boring work is automated. At{' '}
               <a
                 href="https://ovou.com"
                 target="_blank"
@@ -31,39 +31,42 @@ export default async function Home() {
               >
                 OVOU
               </a>{' '}
-              and Helping{' '}
+              we've standardized on Claude Code and Cowork, and I spend a lot of energy showing engineers (and
+              non-engineers) how much further they can push it.
+            </p>
+            <p>
+              My night job is doing the same thing to my own life: agents that manage my inbox, my tasks, my writing, my
+              second brain. An M.Sc. in AI gives me an excuse to take it seriously.
+            </p>
+            <p>
+              Before OVOU I led teams at{' '}
               <a
-                href="https://aztaclub.ir"
+                href="https://balad.ir"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-600"
               >
-                Azta
-              </a>{' '}
-              bookclub as a consultant for their agile processes and their technical stuff.
-            </p>
-            {/* <p>
-              Previously, I worked as a Senior Software Engineer and Team Lead at{' '}
-              <a href="https://balad.ir" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                 Balad
               </a>{' '}
-              (The most popular Iranian map service with 20M+ users) and a Software Engineer at{' '}
-              <a href="https://tapsi.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              (Iran's largest maps service, 20M+ users) and shipped at{' '}
+              <a
+                href="https://tapsi.ir"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-600"
+              >
                 Tapsi
               </a>{' '}
-              (The second most popular Iranian uber-like service with 10M+ users).
-            </p> */}
-            <p>
-              I'm also a musician and a content creator at{' '}
+              (10M+). I've also had a{' '}
               <a
                 href="https://youtube.com/@aliir74"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-600"
               >
-                Youtube
-              </a>
-              . I started my Youtube channel in 2019 to make technology and programming content.
+                YouTube channel
+              </a>{' '}
+              since 2019 where I post about programming, AI, and tech — not on any kind of schedule.
             </p>
           </div>
           <div className="flex flex-1 flex-row justify-around">
