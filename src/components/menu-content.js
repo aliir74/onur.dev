@@ -7,16 +7,12 @@ export const MenuContent = () => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
-        <img
-          src="/assets/me.avif"
-          alt="Ali Irani"
-          width={40}
-          height={40}
-          loading="lazy"
-          className="rounded-full border shadow-sm"
-          // eslint-disable-next-line react/no-unknown-property
-          nopin="nopin"
-        />
+        <div
+          aria-label="Ali Irani"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full border bg-black text-sm font-bold tracking-tight text-white shadow-sm"
+        >
+          AI
+        </div>
         <div className="flex flex-col">
           <span className="font-semibold tracking-tight">Ali Irani</span>
           <span className="text-gray-600">Fullstack Engineer</span>
