@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, Home, YoutubeIcon } from 'lucide-react'
+import { GithubIcon, LinkedinIcon, Home, YoutubeIcon, PresentationIcon } from 'lucide-react'
 
 export const PROFILES = {
   linkedin: {
@@ -54,6 +54,11 @@ export const LINKS = [
     href: '/',
     label: 'Home',
     icon: <Home size={16} />
+  },
+  {
+    href: '/talks',
+    label: 'Talks',
+    icon: <PresentationIcon size={16} />
   }
   // {
   //   href: '/writing',
