@@ -49,21 +49,21 @@ Add a new `/projects` route that mirrors the structure of `/talks` (ScrollArea +
   - External `<a>` with `target="_blank" rel="noopener noreferrer"` and `href={project.url}`
 - [x] Implement
 - [x] Verify: import the component in a scratch render, confirm no runtime errors and markup matches talks-list visual rhythm
-- [ ] Commit (bundles plan file): `feat(projects): add projects data + list component`
+- [x] Commit (bundles plan file): `feat(projects): add projects data + list component`
 
 ## Phase 2 — Page + Navigation Wiring
 
-- [ ] Create `src/app/projects/page.js` modeled exactly on `src/app/talks/page.js`:
+- [x] Create `src/app/projects/page.js` modeled exactly on `src/app/talks/page.js`:
   - `export const revalidate = 3600`
   - `<ScrollArea useScrollAreaId>` + `<FloatingHeader scrollTitle="Projects" />`
   - `<PageTitle title="Projects" />` + intro paragraph (`text-gray-600`, e.g. "Open-source things I've built recently.")
   - `<ProjectsList />`
   - `generateMetadata()` returning title/description/openGraph/canonical for `/projects`
-- [ ] Add `/projects` to `LINKS` in `src/lib/constants.js` with a suitable lucide icon (e.g. `CodeIcon` or `BoxIcon`) — import alongside the existing icons.
-- [ ] Add `/projects` entry to `src/app/sitemap.js` (priority 0.8, changeFrequency 'monthly', mirroring the talks entry).
-- [ ] Add a Projects block on the home page (`src/app/page.js`) just above or below the existing Talks block — same `<div className="content mb-12">` wrapper, same `<h2 className="mb-2 text-xl font-semibold tracking-tight">` heading, same "See all on /projects" pattern. Decide ordering: Projects-then-Talks vs Talks-then-Projects (recommend Projects first since it's the headline change).
-- [ ] Implement
-- [ ] Verify: run `npm run dev`, visit `/`, `/projects`, confirm nav link appears in side menu and mobile drawer, confirm Projects shows on home page, confirm `/projects` page renders with floating header and list. Open DevTools, confirm no console errors, confirm dark/light theme parity with `/talks`.
+- [x] Add `/projects` to `LINKS` in `src/lib/constants.js` with a suitable lucide icon (e.g. `CodeIcon` or `BoxIcon`) — import alongside the existing icons.
+- [x] Add `/projects` entry to `src/app/sitemap.js` (priority 0.8, changeFrequency 'monthly', mirroring the talks entry).
+- [x] Add a Projects block on the home page (`src/app/page.js`) just above or below the existing Talks block — same `<div className="content mb-12">` wrapper, same `<h2 className="mb-2 text-xl font-semibold tracking-tight">` heading, same "See all on /projects" pattern. Decide ordering: Projects-then-Talks vs Talks-then-Projects (recommend Projects first since it's the headline change).
+- [x] Implement
+- [x] Verify: run `npm run dev`, visit `/`, `/projects`, confirm nav link appears in side menu and mobile drawer, confirm Projects shows on home page, confirm `/projects` page renders with floating header and list. Open DevTools, confirm no console errors, confirm dark/light theme parity with `/talks`.
 - [ ] Commit: `feat(projects): add /projects route and home section`
 
 ## Phase 3 — Polish + Ship
