@@ -67,11 +67,7 @@ const DialogTitle = forwardRef(({ className, ...props }, ref) => (
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
 const DialogDescription = forwardRef(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    className={cn('text-sm text-gray-500', className)}
-    {...props}
-  />
+  <DialogPrimitive.Description ref={ref} className={cn('text-sm text-gray-500', className)} {...props} />
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
