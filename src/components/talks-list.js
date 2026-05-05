@@ -26,6 +26,8 @@ export async function TalksList() {
         <li key={deck.slug}>
           <a
             href={`https://talks.aliirani.com/${deck.slug}/`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-baseline justify-between gap-4 border-b border-gray-200 py-4 first:border-t hover:text-blue-600"
           >
             <span className="flex items-baseline gap-2">
