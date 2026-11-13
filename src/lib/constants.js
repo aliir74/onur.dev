@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, Home, YoutubeIcon, PresentationIcon, BoxIcon } from 'lucide-react'
+import { GithubIcon, LinkedinIcon, MailIcon, Home, YoutubeIcon, PresentationIcon, BoxIcon } from 'lucide-react'
 
 export const PROFILES = {
   linkedin: {
@@ -28,6 +28,11 @@ export const PROFILES = {
         />
       </svg>
     )
+  },
+  email: {
+    title: 'Email',
+    url: 'mailto:hi@aliirani.com',
+    icon: <MailIcon size={16} />
   }
 }
 
